@@ -1,0 +1,28 @@
+imports:
+    - { resource: config_dev.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.filesystem
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+
+behat: ~
+
+mink:
+    base_url:   http://test.phonegap.local/
+
+    sahi:
+      host:     %sahi_host%
+
+    browser_name: firefox
+    show_cmd:   open %s
+    default_session: sahi
+    # default_session: symfony
+    goutte: ~
